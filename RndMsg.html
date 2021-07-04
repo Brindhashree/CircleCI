@@ -1,0 +1,41 @@
+<html>
+
+  <body>
+    <div class="jumbotron text-center">
+      <div class="container">
+        <h1>Random generator</h1>
+      </div>
+    </div>
+    <main>
+      <div class="container text-center">
+        <div class="row">
+          <button class="btn btn-lg btn-primary">Click Me</button>
+        </div>
+        <div class="row">
+          <div id="container"></div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      (function() {
+        const Msg = [
+          "Hello world",
+          'How are you',
+          'It was tense.',
+          'I tried to make a belt out of watches. It was a waist of time.',
+          
+        ]; 
+        let counter = 0;
+
+        const appendNew = () => {
+          const p = document.createElement('p');
+          p.innerHTML = Msg[Math.floor(Math.random()*Msg.length)];
+          document.querySelector('#container').prepend(p);
+        }
+
+        const button = document.querySelector('button');
+        button.addEventListener('click', appendNew);
+      })();</script>
+  </body>
+</html>
