@@ -29,7 +29,7 @@ describe('RndMsg.html', () => {
     const button = getByText(container, 'Click Me')
     
     fireEvent.click(button)
-    let generatedParagraphs = container.querySelectorAll('#pun-container p')
+    let generatedParagraphs = container.querySelectorAll('#container p')
     expect(generatedParagraphs.length).toBe(1)
 
     
